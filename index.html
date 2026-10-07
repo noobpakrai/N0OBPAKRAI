@@ -37,14 +37,14 @@
             font-style: italic;
         }
 
-        /* Container do Player Flash e do Vídeo */
-        .media-container {
-            width: 100%;
-            max-width: 800px;
-            height: 600px;
+        /* Container do Player Flash - Ajustado para 550x400 */
+        .flash-container {
+            width: 550px;
+            height: 400px;
             margin: 20px auto;
             border: 3px solid #ff0000;
             background-color: #000;
+            max-width: 100%; /* Garante que não quebre em telas menores */
         }
 
         #ruffle-player {
@@ -52,9 +52,14 @@
             height: 100%;
         }
 
+        /* Container do Vídeo MP4 - Mantendo a mesma proporção */
         video {
-            width: 100%;
-            height: 100%;
+            width: 550px;
+            height: 400px;
+            margin: 20px auto;
+            border: 3px solid #ff0000;
+            background-color: #000;
+            max-width: 100%;
             object-fit: contain;
         }
 
@@ -73,6 +78,7 @@
             border: 1px solid #444;
             padding: 5px 10px;
             width: 80%;
+            max-width: 600px;
             text-align: center;
             font-family: monospace;
             margin-top: 5px;
@@ -99,31 +105,29 @@
     <h1>N0OBPAKRAI</h1>
 
     <!-- 3. Frase sobre Flash e CS -->
-    <p class="subtitulo">Gosta de Animações em flash? gosta de CS? aqui vai ter a mistura dos dois!</p>
+    <p class="subtitulo">gosta de Animações em flash? gosta de CS? aqui vai ter a mistura dos dois!</p>
 
-    <!-- 4. SWF (N0OBPAKRAI.swf) rodando no Ruffle -->
-    <div class="media-container">
+    <!-- 4. SWF (N0OBPAKRAI.swf) rodando no Ruffle a 550x400 -->
+    <div class="flash-container">
         <div id="ruffle-player"></div>
     </div>
 
     <!-- 5. Mensagem da extensão -->
     <div class="aviso-extensao">
-        <p>Não tem a extensão do ruffle? baixe ela, pois voce vai precisar (copie e cole):</p>
-        <input type="text" value="https://chromewebstore.google.com/detail/ruffle-flash-emulator/donbcfbmhbcapadipfkeojnmajbakjdc?pli=1" readonly onclick="this.select()">
-        <p style="margin-top: 15px;">OU veja a animação em mp4 logo abaixo:</p>
+        <p>não tem a extensão do ruffle? baixe ela, pois voce vai precisar (copie e cole):</p>
+        <input type="text" value="https://google.com" readonly onclick="this.select()">
+        <p style="margin-top: 15px;">OU veja a animação em mp4</p>
     </div>
 
-    <!-- 6. MP4 do Swivel (N0OBPAKRAI.mp4) -->
-    <div class="media-container">
-        <video controls>
-            <source src="N0OBPAKRAI.mp4" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
-        </video>
-    </div>
+    <!-- 6. MP4 do Swivel (N0OBPAKRAI.mp4) a 550x400 -->
+    <video controls>
+        <source src="N0OBPAKRAI.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
 
     <!-- 7. Direitos Autorais / Rodapé -->
     <footer>
-        <p>&copy; 2026 N0OBPAKRAI. Todos os direitos reservados. Feito por um noob, para noobs.</p>
+        <p>N0OBPAKRAI, todos os direitos reservados</p>
     </footer>
 
     <!-- Script que inicializa o arquivo Flash -->
